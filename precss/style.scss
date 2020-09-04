@@ -1,0 +1,256 @@
+@import './var';
+@import './_mixins';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a, a:hover{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: 'Roboto';
+    font-weight: 400;
+    background: $gray2_color;
+    display: flex;
+    justify-content: space-between;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.title{
+    font-weight: 500;
+    font-size: 22px;
+    color: $black_color;
+    margin-bottom: 25px;
+}
+
+section{
+    margin-left: 250px !important;
+}
+
+.container_custom{
+    // max-width: 1140px;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* ########################     navbar  ###################### */
+
+.navbar{
+    width: 230px;
+    height: 100vh;
+    background: $white_color;
+    display: flex;
+    justify-content: center;
+    box-shadow: 8px 0px 15px 0px rgba(231,231,231,1);
+    position: fixed;
+    &__logo{
+        font-size: 35px;
+        line-height: 28px;
+        font-weight: 700;
+        color: $black_color;
+        display: block;
+        text-align: center;
+        margin-bottom: 30px;
+        .point{
+            font-size: 60px;
+            line-height: 28px;
+            color: $green_color;
+        }
+    }
+    &__item {
+        // display: block;
+        // width: 200px;
+        margin: 10px 0;
+    }
+    &__link{
+        width: 230px;
+        display: inline-flex;
+        align-items: center;
+        font-size: 20px;
+        color: $black_color;
+        position: relative;
+        padding: 10px 22px;
+        // transition: all .2s;
+        
+        &:hover{
+            background: $gray2_color;
+            font-weight: 500;
+        }
+        &::after{
+            position: absolute;
+            content: '';
+            top: 50%;
+            left: 0;
+            width: 5px;
+            height: 0;
+            opacity: 0;
+            background: $green_color;
+            z-index: 1;
+            transition: all 0.2s;
+        }
+        &:hover::after{
+            height: 100%;
+            opacity: 1;
+            top: 0;
+        }
+        .fa{
+            font-size: 28px;
+            color: $green_color;
+            margin-right: 10px;
+        }
+    }
+}
+
+/* ########################     navbar END  ###################### */
+
+/* ########################     header  ###################### */
+
+.header{
+}
+
+/* ########################     header END ###################### */
+
+/* ########################     section main ###################### */
+
+.main{
+    // background: $gray2_color;
+}
+
+/* ########################     section main END ###################### */
+
+/* ########################     section addProduct ###################### */
+
+.form{
+    width: 650px;
+    background: $white_color;
+    box-shadow: 0px 0px 10px 0px rgba(231,231,231,1);
+    margin-bottom: 25px;
+    padding: 15px 25px;
+    &__row{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__col1,
+    &__col2{
+        display: flex;
+    }
+    &__col2{
+        height: 224px;
+    }
+    &__text{
+        font-family: 'Roboto';
+        font-weight: 400;
+        font-size: 16px;
+        text-align: right;
+        display: inline-flex;
+        justify-content: space-between;
+        flex-direction: column;
+        margin: 20px 0px;
+    }
+    &__input{
+        width: 210px;
+        input,
+        .select{
+            width: 200px;
+            height: 36px;
+            outline: none;
+            border: none;
+            border-radius: none;
+            background: $gray2_color;
+            font-size: 16px;
+            font-weight: 400;
+            margin: 10px 0px 10px 10px;
+            padding-left: 10px;
+        }
+        .select{
+            cursor: pointer;
+            option{
+                border: none;
+            }
+        }
+        [type="date"]{
+            cursor: text;
+        }
+    }
+    .btn{
+        cursor: pointer;
+        width: 120px;
+        display: block;
+        background: $green_color;
+        font-size: 14px;
+        color: white;
+        outline: none;
+        border-width: 0;
+        text-transform: uppercase;
+        padding: 10px 0;
+        margin: 10px 0 0 auto;
+        &:hover{
+            background: $green2_color;
+        }
+    }
+}
+
+.addProduct{
+    margin-top: 25px;
+    
+        .table{
+            font-family: 'Roboto';
+            text-align: left;
+            background: $white_color;
+            color: $black_color;
+            box-shadow: 0px 0px 10px 0px rgba(231,231,231,1);
+            width: 1140px;
+
+            thead{
+                border-bottom: 3px solid $gray2_color;
+                th{
+                    font-size: 14px;
+                    font-weight: 400;
+                    text-transform: uppercase;
+                    padding: 14px 26px;
+                }
+            }
+            tbody{
+                .tdProductName{
+                    font-weight: 500;
+                }
+                td{
+                    font-size: 18px;
+                    border-bottom: 2px solid $gray2_color;
+                    padding: 16px 26px;
+                }
+                .red{
+                    // background: red;
+                    color: red;
+                }
+                .green{
+                    // background: $green_color;
+                    color: $green_color;
+                }
+            }
+            tr:hover td{
+                background: rgba($color: $green_color, $alpha: 0.1);
+                // background: #e8edff;
+            }
+        }
+
+        
+}
+
+/* ########################     section addProduct END ###################### */

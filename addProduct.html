@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Analyzer</title>
+  <link rel="shortcut icon" href="/img/logo.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/font-awesome.css">
+  <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <nav class="navbar">
+    <ul>
+      <li class="navbar__item">
+        <a href="/" class="navbar__logo">Аnalyzer<span class="point">.</span></a>
+      </li>
+      <li class="navbar__item">
+        <a href="" class="navbar__link"><i class="fa fa-home" aria-hidden="true"></i>Главный</a>
+      </li>
+      <li class="navbar__item">
+        <a href="analiz.html" class="navbar__link"><i class="fa fa-pie-chart" aria-hidden="true"></i>Анализ продаж</a>
+      </li>
+      <li class="navbar__item">
+        <a href="addProduct.html" class="navbar__link"><i class="fa fa-plus-circle" aria-hidden="true"></i>Добавить
+          товар</a>
+      </li>
+    </ul>
+  </nav>
+
+  <header class="header">
+  </header>
+
+  <section class="addProduct container_custom">
+    <h1 class="title">Добавить товар</h1>
+    <form action="" class="form">
+      <div class="form__row">
+        <div class="form__col1">
+          <div class="form__text">
+            <label>Бренд</label>
+            <label>Название</label>
+            <label>Тип</label>
+            <label>Вес</label>
+            <label>Количество</label>
+          </div>
+          <div class="form__input">
+            <input type="text" placeholder="...">
+            <input type="text" placeholder="...">
+            <input type="text" placeholder="...">
+            <input type="text" placeholder="...">
+            <input type="text" placeholder="...">
+          </div>
+        </div>
+        <div class="form__col2">
+          <div class="form__text">
+            <label>Дата</label>
+            <label>Склад</label>
+            <label>Ст. т.</label>
+            <label>Ст. т. + %</label>
+          </div>
+          <div class="form__input">
+            <input type="date" value="2020-09-05">
+            <select name="" id="" class="select">
+              <option value="1">На склад</option>
+              <option value="2">Остаток</option>
+            </select>
+            <input type="text" placeholder="...">
+            <input type="text" placeholder="...">
+          </div>
+        </div>
+      </div>
+      <button class="btn" type="submit">Сохранить</button>
+    </form>
+    <h1 class="title">Товары</h1>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Бренд</th>
+          <th>Название</th>
+          <th>Тип</th>
+          <th>Вес</th>
+          <th>Кол.</th>
+          <th>Дата</th>
+          <th>Склад</th>
+          <th>Ст. т.</th>
+          <th>Ст. т. + %</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="tdProductName">Alpen Golds</td>
+          <td>MAX FUN</td>
+          <td>Шоколад</td>
+          <td>150г</td>
+          <td>15</td>
+          <td>30.08.2020</td>
+          <td class="red">Остаток</td>
+          <td>15500</td>
+          <td>16000</td>
+        </tr>
+        <tr>
+          <td class="tdProductName">Alpen Gold</td>
+          <td>MAX FUN</td>
+          <td>Шоколад</td>
+          <td>150г</td>
+          <td>150</td>
+          <td>30.08.2020</td>
+          <td class="green">На склад</td>
+          <td>15500</td>
+          <td>16000</td>
+        </tr>
+      </tbody>
+    </table>
+    
+  </section>
+
+
+
+
+
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/jquery.fancybox.min.js"></script>
+  <script src="js/jquery.waypoints.js"></script>
+  <script src="js/jquery.counterup.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
